@@ -1,0 +1,696 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title>第三届集训队第一次作业题解 | </title>
+    <meta name="author" content="Scars">
+    
+    <meta name="description" content="题目1: Hello World题目描述这道超级简单的题目没有任何输入。
+你只需要在一行中输出著名短句“Hello World!”就可以了。
+输入样例：1无
+
+输出样例：1Hello World!
+
+解题思路直接输出
+C语言题解123456#include &amp;lt;stdio.h&amp;gt;int ma">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="第三届集训队第一次作业题解"/>
+    <meta property="og:site_name" content="Scars&#39; Blog"/>
+
+    
+    <meta property="og:image" content=""/>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="Scars&#39; Blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+    
+        <link rel="stylesheet" href="/css/lib/prettify-tomorrow-night-eighties.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="indigo">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">Scars&#39; Blog</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            分类
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-reading " href="/reading" >
+                            <i class="fa fa-book "></i>
+                            
+                            读书
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            
+                            关于
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            搜索
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav indigo darken-1" id="main-menu">
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    
+                    首页
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    归档
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    分类
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-reading " href="/reading" >
+                    <i class="fa fa-book "></i>
+                    
+                    读书
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    
+                    关于
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    搜索
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav indigo darken-1" id="category-menu">
+    
+
+            
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">搜索</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper indigo">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>第三届集训队第一次作业题解</h1>
+    
+
+
+            </div>
+            <time class="pink-link-context" datetime="2023-10-25T10:00:00.000Z"><a href="/2023/10/25/%E7%AC%AC%E4%B8%89%E5%B1%8A%E9%9B%86%E8%AE%AD%E9%98%9F%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A%E9%A2%98%E8%A7%A3/">2023-10-25</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/分支控制/" class="chip pink lighten-1">分支控制</a>
+        
+            <a href="/tags/swich/" class="chip pink lighten-1">swich</a>
+        
+            <a href="/tags/循环控制/" class="chip pink lighten-1">循环控制</a>
+        
+            <a href="/tags/for/" class="chip pink lighten-1">for</a>
+        
+            <a href="/tags/函数/" class="chip pink lighten-1">函数</a>
+        
+            <a href="/tags/递归/" class="chip pink lighten-1">递归</a>
+        
+            <a href="/tags/数组/" class="chip pink lighten-1">数组</a>
+        
+            <a href="/tags/二维数组/" class="chip pink lighten-1">二维数组</a>
+        
+            <a href="/tags/字符串/" class="chip pink lighten-1">字符串</a>
+        
+            <a href="/tags/面向对象/" class="chip pink lighten-1">面向对象</a>
+        
+            <a href="/tags/对象与类/" class="chip pink lighten-1">对象与类</a>
+        
+            <a href="/tags/对象数组/" class="chip pink lighten-1">对象数组</a>
+        
+            <a href="/tags/C/" class="chip pink lighten-1">C</a>
+        
+            <a href="/tags/C/" class="chip pink lighten-1">C++</a>
+        
+    </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#%E9%A2%98%E7%9B%AE1-Hello-World"><span class="section table-of-contents-text">题目1: Hello World</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="section table-of-contents-text">题目描述</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="section table-of-contents-text">输入样例：</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="section table-of-contents-text">输出样例：</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="section table-of-contents-text">解题思路</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#C%E8%AF%AD%E8%A8%80%E9%A2%98%E8%A7%A3"><span class="section table-of-contents-text">C语言题解</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#C-%E8%AF%AD%E8%A8%80%E9%A2%98%E8%A7%A3"><span class="section table-of-contents-text">C++语言题解</span></a></li></ol></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#%E9%A2%98%E7%9B%AE2-%E6%9F%A5%E8%AF%A2%E6%B0%B4%E6%9E%9C%E4%BB%B7%E6%A0%BC"><span class="section table-of-contents-text">题目2: 查询水果价格</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-1"><span class="section table-of-contents-text">题目描述</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="section table-of-contents-text">输入格式:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="section table-of-contents-text">输出格式:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B1"><span class="section table-of-contents-text">输入样例1:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B1"><span class="section table-of-contents-text">输出样例1:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B2"><span class="section table-of-contents-text">输入样例2:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B2"><span class="section table-of-contents-text">输出样例2:</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF-1"><span class="section table-of-contents-text">解题思路</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#C%E8%AF%AD%E8%A8%80%E9%A2%98%E8%A7%A3-1"><span class="section table-of-contents-text">C语言题解</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#C-%E8%AF%AD%E8%A8%80%E9%A2%98%E8%A7%A3-1"><span class="section table-of-contents-text">C++语言题解</span></a></li></ol></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#%E9%A2%98%E7%9B%AE3-%E6%B1%82%E6%95%B4%E6%95%B0%E6%AE%B5%E5%92%8C"><span class="section table-of-contents-text">题目3: 求整数段和</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-2"><span class="section table-of-contents-text">题目描述</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F%EF%BC%9A"><span class="section table-of-contents-text">输入格式：</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%EF%BC%9A"><span class="section table-of-contents-text">输出格式：</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B%EF%BC%9A-1"><span class="section table-of-contents-text">输入样例：</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B%EF%BC%9A-1"><span class="section table-of-contents-text">输出样例：</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF-2"><span class="section table-of-contents-text">解题思路</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#C%E8%AF%AD%E8%A8%80%E9%A2%98%E8%A7%A3-2"><span class="section table-of-contents-text">C语言题解</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#C-%E8%AF%AD%E8%A8%80%E9%A2%98%E8%A7%A3-2"><span class="section table-of-contents-text">C++语言题解</span></a></li></ol></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#%E9%A2%98%E7%9B%AE4-%E9%98%B6%E4%B9%98"><span class="section table-of-contents-text">题目4: 阶乘</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-3"><span class="section table-of-contents-text">题目描述</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-5"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0"><span class="section table-of-contents-text">输入描述:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-5"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0"><span class="section table-of-contents-text">输出描述:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-5"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B1-1"><span class="section table-of-contents-text">输入样例1</span></a></li><li class="section table-of-contents-item section table-of-contents-level-5"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B1-1"><span class="section table-of-contents-text">输出样例1</span></a></li><li class="section table-of-contents-item section table-of-contents-level-5"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B2-1"><span class="section table-of-contents-text">输入样例2</span></a></li><li class="section table-of-contents-item section table-of-contents-level-5"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B2-1"><span class="section table-of-contents-text">输出样例2</span></a></li></ol></li></ol></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF-3"><span class="section table-of-contents-text">解题思路</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#C%E8%AF%AD%E8%A8%80%E9%A2%98%E8%A7%A3-3"><span class="section table-of-contents-text">C语言题解</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#C-%E8%AF%AD%E8%A8%80%E9%A2%98%E8%A7%A3-3"><span class="section table-of-contents-text">C++语言题解</span></a></li></ol></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#%E9%A2%98%E7%9B%AE5-%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E6%89%BE%E6%9C%80%E5%80%BC"><span class="section table-of-contents-text">题目5: 二维数组找最值</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-4"><span class="section table-of-contents-text">题目描述</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-1"><span class="section table-of-contents-text">输入格式:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-1"><span class="section table-of-contents-text">输出格式:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B"><span class="section table-of-contents-text">输入样例:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B"><span class="section table-of-contents-text">输出样例:</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF-4"><span class="section table-of-contents-text">解题思路</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#C%E8%AF%AD%E8%A8%80%E9%A2%98%E8%A7%A3-4"><span class="section table-of-contents-text">C语言题解</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#C-%E8%AF%AD%E8%A8%80%E9%A2%98%E8%A7%A3-4"><span class="section table-of-contents-text">C++语言题解</span></a></li></ol></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#%E9%A2%98%E7%9B%AE6-%E5%8A%A8%E6%80%81%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E7%9A%84%E8%BD%AC%E7%BD%AE"><span class="section table-of-contents-text">题目6: 动态二维数组的转置</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-5"><span class="section table-of-contents-text">题目描述</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-2"><span class="section table-of-contents-text">输入格式:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-2"><span class="section table-of-contents-text">输出格式:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B-1"><span class="section table-of-contents-text">输入样例:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-1"><span class="section table-of-contents-text">输出样例:</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF-5"><span class="section table-of-contents-text">解题思路</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#C%E8%AF%AD%E8%A8%80%E9%A2%98%E8%A7%A3-5"><span class="section table-of-contents-text">C语言题解</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#C-%E8%AF%AD%E8%A8%80%E9%A2%98%E8%A7%A3-5"><span class="section table-of-contents-text">C++语言题解</span></a></li></ol></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#%E9%A2%98%E7%9B%AE7-A-B"><span class="section table-of-contents-text">题目7: A-B</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-6"><span class="section table-of-contents-text">题目描述</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F%EF%BC%9A-1"><span class="section table-of-contents-text">输入格式：</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%EF%BC%9A-1"><span class="section table-of-contents-text">输出格式：</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B%EF%BC%9A-2"><span class="section table-of-contents-text">输入样例：</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B%EF%BC%9A-2"><span class="section table-of-contents-text">输出样例：</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF-6"><span class="section table-of-contents-text">解题思路</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#C%E8%AF%AD%E8%A8%80%E9%A2%98%E8%A7%A3-6"><span class="section table-of-contents-text">C语言题解</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#C-%E8%AF%AD%E8%A8%80%E9%A2%98%E8%A7%A3-6"><span class="section table-of-contents-text">C++语言题解</span></a></li></ol></li></ol></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <h1 id="题目1-Hello-World"><a href="#题目1-Hello-World" class="headerlink" title="题目1: Hello World"></a>题目1: <a target="_blank" rel="noopener" href="https://pintia.cn/problem-sets/1716048884290166784/problems/1716068043258474496">Hello World</a></h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>这道超级简单的题目没有任何输入。</p>
+<p>你只需要在一行中输出著名短句“Hello World!”就可以了。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">无</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello World!</span><br></pre></td></tr></table></figure>
+
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>直接输出</p>
+<h3 id="C语言题解"><a href="#C语言题解" class="headerlink" title="C语言题解"></a>C语言题解</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Hello World!\n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="C-语言题解"><a href="#C-语言题解" class="headerlink" title="C++语言题解"></a>C++语言题解</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Hello World!&quot;</span> &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="题目2-查询水果价格"><a href="#题目2-查询水果价格" class="headerlink" title="题目2: 查询水果价格"></a>题目2: <a target="_blank" rel="noopener" href="https://pintia.cn/problem-sets/1716048884290166784/problems/1716079456072908800">查询水果价格</a></h1><h2 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h2><p>给定四种水果，分别是苹果（apple）、梨（pear）、桔子（orange）、葡萄（grape），单价分别对应为3.00元&#x2F;公斤、2.50元&#x2F;公斤、4.10元&#x2F;公斤、10.20元&#x2F;公斤。</p>
+<p>首先在屏幕上显示以下菜单：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[1] apple</span><br><span class="line">[2] pear</span><br><span class="line">[3] orange</span><br><span class="line">[4] grape</span><br><span class="line">[0] exit</span><br></pre></td></tr></table></figure>
+
+<p>用户可以输入编号1~4查询对应水果的单价。当连续查询次数超过5次时，程序应自动退出查询；不到5次而用户输入0即退出；输入其他编号，显示价格为0。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出用户连续输入的若干个编号。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>首先在屏幕上显示菜单。然后对应用户的每个输入，在一行中按格式“price &#x3D; 价格”输出查询结果，其中价格保留两位小数。当用户连续查询次数超过5次、或主动输入0时，程序结束。</p>
+<h3 id="输入样例1"><a href="#输入样例1" class="headerlink" title="输入样例1:"></a>输入样例1:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 -1 0 2</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例1"><a href="#输出样例1" class="headerlink" title="输出样例1:"></a>输出样例1:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[1] apple</span><br><span class="line">[2] pear</span><br><span class="line">[3] orange</span><br><span class="line">[4] grape</span><br><span class="line">[0] exit</span><br><span class="line">price = 4.10</span><br><span class="line">price = 0.00</span><br></pre></td></tr></table></figure>
+
+<h3 id="输入样例2"><a href="#输入样例2" class="headerlink" title="输入样例2:"></a>输入样例2:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 2 3 3 4 4 5 6 7 8</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例2"><a href="#输出样例2" class="headerlink" title="输出样例2:"></a>输出样例2:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[1] apple</span><br><span class="line">[2] pear</span><br><span class="line">[3] orange</span><br><span class="line">[4] grape</span><br><span class="line">[0] exit</span><br><span class="line">price = 3.00</span><br><span class="line">price = 2.50</span><br><span class="line">price = 4.10</span><br><span class="line">price = 4.10</span><br><span class="line">price = 10.20</span><br></pre></td></tr></table></figure>
+
+<h2 id="解题思路-1"><a href="#解题思路-1" class="headerlink" title="解题思路"></a>解题思路</h2><p>这个问题可以通过编写一个简单的循环程序来解决。</p>
+<ol>
+<li>首先，定义水果名称和对应的单价。可以使用数组来存储这些信息。</li>
+<li>显示菜单，列出水果选项（1到4）以及退出选项（0）。</li>
+<li>使用循环来接收用户输入。在循环中，需要进行以下步骤： a. 提示用户输入水果的编号。 b. 根据用户输入的编号，检查是否在有效范围内（1到4）。 c. 如果编号有效，输出对应的水果价格，否则输出价格为0。 d. 记录用户查询次数，当连续查询次数达到5次或用户输入0时，退出循环。</li>
+<li>在循环外部，输出菜单，并在每次查询后输出价格结果。</li>
+</ol>
+<h3 id="C语言题解-1"><a href="#C语言题解-1" class="headerlink" title="C语言题解"></a>C语言题解</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="comment">// 定义水果名称和对应的单价</span></span><br><span class="line">    <span class="type">float</span> fruit_prices[] = &#123;<span class="number">3.00</span>, <span class="number">2.50</span>, <span class="number">4.10</span>, <span class="number">10.20</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 初始化查询次数</span></span><br><span class="line">    <span class="type">int</span> query_count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 显示菜单</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;[1] apple\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;[2] pear\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;[3] orange\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;[4] grape\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;[0] exit\n&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (query_count &lt; <span class="number">5</span>) &#123;</span><br><span class="line">        <span class="type">int</span> fruit_id;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;fruit_id);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 检查用户输入是否有效</span></span><br><span class="line">        <span class="keyword">if</span> (fruit_id == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fruit_id &gt;= <span class="number">1</span> &amp;&amp; fruit_id &lt;= <span class="number">4</span>) &#123;</span><br><span class="line">            <span class="type">float</span> price = fruit_prices[fruit_id - <span class="number">1</span>];</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;price = %.2f\n&quot;</span>, price);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;price = 0.00\n&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        query_count++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="C-语言题解-1"><a href="#C-语言题解-1" class="headerlink" title="C++语言题解"></a>C++语言题解</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;  <span class="comment">// 使用标准命名空间</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 定义水果名称和对应的单价</span></span><br><span class="line">    <span class="type">double</span> fruit_prices[] = &#123;<span class="number">3.00</span>, <span class="number">2.50</span>, <span class="number">4.10</span>, <span class="number">10.20</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 初始化查询次数</span></span><br><span class="line">    <span class="type">int</span> query_count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 显示菜单</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;[1] apple&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;[2] pear&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;[3] orange&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;[4] grape&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;[0] exit&quot;</span> &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (query_count &lt; <span class="number">5</span>) &#123;</span><br><span class="line">        <span class="type">int</span> fruit_id;</span><br><span class="line">        cin &gt;&gt; fruit_id;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 检查用户输入是否有效</span></span><br><span class="line">        <span class="keyword">if</span> (fruit_id == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fruit_id &gt;= <span class="number">1</span> &amp;&amp; fruit_id &lt;= <span class="number">4</span>) &#123;</span><br><span class="line">            <span class="type">double</span> price = fruit_prices[fruit_id - <span class="number">1</span>];</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;price = &quot;</span> &lt;&lt; fixed &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">2</span>) &lt;&lt; price &lt;&lt; endl;</span><br><span class="line">            <span class="comment">// setprecision(2) 是 &lt;iomanip&gt; 头文件中的一个函数，用于控制浮点数的输出精度</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;price = 0.00&quot;</span> &lt;&lt; endl;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        query_count++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="题目3-求整数段和"><a href="#题目3-求整数段和" class="headerlink" title="题目3: 求整数段和"></a>题目3: <a target="_blank" rel="noopener" href="https://pintia.cn/problem-sets/1716048884290166784/problems/1716074667628969984">求整数段和</a></h1><h2 id="题目描述-2"><a href="#题目描述-2" class="headerlink" title="题目描述"></a>题目描述</h2><p>给定两个整数<em>A</em>和<em>B</em>，输出从<em>A</em>到<em>B</em>的所有整数以及这些数的和。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出2个整数 $A$ 和 $B$ ，其中 $ -100 \leq A \leq B \leq 100 $，其间以空格分隔。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>首先顺序输出从$A$到$B$的所有整数，每5个数字占一行，每个数字占5个字符宽度，向右对齐。最后在一行中按<code>Sum = X</code>的格式输出全部数字的和<code>X</code>。</p>
+<h3 id="输入样例：-1"><a href="#输入样例：-1" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-3 8</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例：-1"><a href="#输出样例：-1" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">   -3   -2   -1    0    1</span><br><span class="line">    2    3    4    5    6</span><br><span class="line">    7    8</span><br><span class="line">Sum = 30</span><br></pre></td></tr></table></figure>
+
+<h2 id="解题思路-2"><a href="#解题思路-2" class="headerlink" title="解题思路"></a>解题思路</h2><p>这道题目要求根据给定的整数范围A和B，输出从A到B的所有整数，并计算它们的和。</p>
+<ol>
+<li>首先，读取输入的两个整数A和B。</li>
+<li>使用一个循环来遍历从A到B的整数，将它们输出到屏幕上。可以使用一个计数器来确定何时输出换行符。</li>
+<li>在循环外部，计算这些整数的和。</li>
+<li>最后，输出整数和的值。</li>
+</ol>
+<h3 id="C语言题解-2"><a href="#C语言题解-2" class="headerlink" title="C语言题解"></a>C语言题解</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> A, B;</span><br><span class="line">    <span class="comment">// 读取输入的两个整数A和B</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;A, &amp;B);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = A; i &lt;= B; i++) &#123;</span><br><span class="line">        <span class="comment">// 输出整数，每个整数占5个字符宽度，右对齐</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%5d&quot;</span>, i);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 计算整数的和</span></span><br><span class="line">        sum += i;</span><br><span class="line">        count++;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 每输出5个整数后，换行</span></span><br><span class="line">        <span class="keyword">if</span> (count == <span class="number">5</span>) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">            count = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 如果最后一行没有满5个数字，仍然需要换行</span></span><br><span class="line">    <span class="keyword">if</span> (count &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 输出整数和的值</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Sum = %d\n&quot;</span>, sum);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="C-语言题解-2"><a href="#C-语言题解-2" class="headerlink" title="C++语言题解"></a>C++语言题解</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> A, B;</span><br><span class="line">    cin &gt;&gt; A &gt;&gt; B;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = A; i &lt;= B; i++) &#123;</span><br><span class="line">        cout.<span class="built_in">width</span>(<span class="number">5</span>); <span class="comment">// 设置输出宽度为5字符</span></span><br><span class="line">        cout &lt;&lt; right &lt;&lt; i; <span class="comment">// 向右对齐输出整数</span></span><br><span class="line"></span><br><span class="line">        sum += i;</span><br><span class="line">        count++;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 当输出5个整数后，换行</span></span><br><span class="line">        <span class="keyword">if</span> (count == <span class="number">5</span>) &#123;</span><br><span class="line">            cout &lt;&lt; endl;</span><br><span class="line">            count = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 如果最后一行没有满5个数字，仍然需要换行</span></span><br><span class="line">    <span class="keyword">if</span> (count &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Sum = &quot;</span> &lt;&lt; sum &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="题目4-阶乘"><a href="#题目4-阶乘" class="headerlink" title="题目4: 阶乘"></a>题目4: <a target="_blank" rel="noopener" href="https://pintia.cn/problem-sets/1716048884290166784/problems/1716074783836348416">阶乘</a></h1><h2 id="题目描述-3"><a href="#题目描述-3" class="headerlink" title="题目描述"></a>题目描述</h2><p>给你一个正整数，你能算出它的阶乘是多少吗？</p>
+<h5 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h5><p>若干行，每行一个整数 $ n $ 满足 $ 1 \leq n \leq 20 $。</p>
+<h5 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h5><p>按顺序输出每个整数的阶乘，一个结果占一行。</p>
+<h5 id="输入样例1-1"><a href="#输入样例1-1" class="headerlink" title="输入样例1"></a>输入样例1</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">6</span><br></pre></td></tr></table></figure>
+
+<h5 id="输出样例1-1"><a href="#输出样例1-1" class="headerlink" title="输出样例1"></a>输出样例1</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">720</span><br></pre></td></tr></table></figure>
+
+<h5 id="输入样例2-1"><a href="#输入样例2-1" class="headerlink" title="输入样例2"></a>输入样例2</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">1</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
+
+<h5 id="输出样例2-1"><a href="#输出样例2-1" class="headerlink" title="输出样例2"></a>输出样例2</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">120</span><br><span class="line">1</span><br><span class="line">6</span><br></pre></td></tr></table></figure>
+
+<h2 id="解题思路-3"><a href="#解题思路-3" class="headerlink" title="解题思路"></a>解题思路</h2><p>阶乘是一个正整数的连乘，例如，5的阶乘表示为5!，等于5 × 4 × 3 × 2 × 1。</p>
+<ol>
+<li>读取输入的整数n。</li>
+<li>使用一个循环来计算n的阶乘。可以使用一个变量来迭代计算，初始值设置为1，然后从1乘到n，每次迭代将当前值乘以迭代变量。</li>
+<li>输出计算得到的阶乘值。</li>
+<li>重复上述步骤，直到读取所有的输入整数。</li>
+</ol>
+<p>这个程序循环读取输入的整数n，然后计算n的阶乘并输出结果。一旦输入结束，即读取到文件结束标志EOF，程序将退出。这样，它可以处理多行输入，每行一个整数，计算每个整数的阶乘。</p>
+<p>注：本题测试数据会超出int的上限，需使用long long</p>
+<ol>
+<li>INT_MAX &#x3D; 2147483647</li>
+<li>LLONG_MAX &#x3D; 9223372036854775807</li>
+</ol>
+<h3 id="C语言题解-3"><a href="#C语言题解-3" class="headerlink" title="C语言题解"></a>C语言题解</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 递归函数来计算阶乘，返回 long long 类型</span></span><br><span class="line"><span class="type">long</span> <span class="type">long</span> <span class="title function_">factorial</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">    <span class="comment">// 基本情况: 阶乘的定义中 0! 和 1! 都等于 1</span></span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">0</span> || n == <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>; </span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// 递归情况: 阶乘 n! = n * (n-1)!</span></span><br><span class="line">        <span class="comment">// 这里调用自身来计算 (n-1)!，然后将结果与 n 相乘</span></span><br><span class="line">        <span class="keyword">return</span> n * factorial(n - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n) != EOF) &#123;</span><br><span class="line">        <span class="comment">// 调用 factorial 函数来计算阶乘</span></span><br><span class="line">        <span class="type">long</span> <span class="type">long</span> result = factorial(n);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 输出结果</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%lld\n&quot;</span>, result);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="C-语言题解-3"><a href="#C-语言题解-3" class="headerlink" title="C++语言题解"></a>C++语言题解</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; <span class="comment">// 使用标准命名空间</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 递归函数来计算阶乘，返回 long long 类型</span></span><br><span class="line"><span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">factorial</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 基本情况: 阶乘的定义中 0! 和 1! 都等于 1</span></span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">0</span> || n == <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1LL</span>; <span class="comment">// 使用 1LL 表示 long long 类型的 1</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// 递归情况: 阶乘 n! = n * (n-1)!</span></span><br><span class="line">        <span class="comment">// 这里调用自身来计算 (n-1)!，然后将结果与 n 相乘</span></span><br><span class="line">        <span class="keyword">return</span> n * <span class="built_in">factorial</span>(n - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (cin &gt;&gt; n) &#123;</span><br><span class="line">        <span class="comment">// 调用 factorial 函数来计算阶乘</span></span><br><span class="line">        <span class="type">long</span> <span class="type">long</span> result = <span class="built_in">factorial</span>(n);</span><br><span class="line"> </span><br><span class="line">        <span class="comment">// 输出结果</span></span><br><span class="line">        cout &lt;&lt; result &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="题目5-二维数组找最值"><a href="#题目5-二维数组找最值" class="headerlink" title="题目5: 二维数组找最值"></a>题目5: <a target="_blank" rel="noopener" href="https://pintia.cn/problem-sets/1716048884290166784/problems/1716071165905223680">二维数组找最值</a></h1><h2 id="题目描述-4"><a href="#题目描述-4" class="headerlink" title="题目描述"></a>题目描述</h2><p>从键盘输入 $ m $  $ (2 \leq m \leq 6) $ 行  $n $ $ ( 2 \leq n \leq 6 ) $ 列整型数据，编程找出其中的最大值及其所在位置的行列下标值并输出。</p>
+<h3 id="输入格式-1"><a href="#输入格式-1" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>在第一行输入数据的行数m和列数n的值，从第二行开始以二维数组的形式依次输入m行n列整型数据。</p>
+<h3 id="输出格式-1"><a href="#输出格式-1" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>依次输出最大值及其所在位置的行列下标值，中间以逗号,分隔，最后换行。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3 4</span><br><span class="line">1 2 3 4</span><br><span class="line">8 9 7 6</span><br><span class="line">5 6 7 0</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">9,1,1</span><br></pre></td></tr></table></figure>
+
+<h2 id="解题思路-4"><a href="#解题思路-4" class="headerlink" title="解题思路"></a>解题思路</h2><p>思路：</p>
+<ol>
+<li>首先，从键盘输入m和n，表示数据的行数和列数。</li>
+<li>创建一个二维数组，大小为m行n列，用于存储输入的整数数据。</li>
+<li>使用循环读取m行n列的整数数据，并同时跟踪最大值以及其所在的行和列。</li>
+<li>找到最大值后，输出最大值及其所在的行和列。</li>
+</ol>
+<h3 id="C语言题解-4"><a href="#C语言题解-4" class="headerlink" title="C语言题解"></a>C语言题解</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;limits.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> m, n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;m, &amp;n); <span class="comment">// 从键盘输入数据的行数m和列数n</span></span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> max_value = INT_MIN;  <span class="comment">// 初始化为负无穷，确保任何输入值都会比它大</span></span><br><span class="line">    <span class="type">int</span> max_row, max_col;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 循环遍历二维数组，同时查找最大值及其所在的行和列</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">            <span class="type">int</span> value;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;value); <span class="comment">// 输入二维数组中的整数值</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// 如果当前值大于已知最大值，更新最大值及其所在的行和列</span></span><br><span class="line">            <span class="keyword">if</span> (value &gt; max_value) &#123;</span><br><span class="line">                max_value = value;</span><br><span class="line">                max_row = i; <span class="comment">// 记录行下标</span></span><br><span class="line">                max_col = j; <span class="comment">// 记录列下标</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 输出最大值及其位置的行和列</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d,%d,%d\n&quot;</span>, max_value, max_row, max_col);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="C-语言题解-4"><a href="#C-语言题解-4" class="headerlink" title="C++语言题解"></a>C++语言题解</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;climits&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> m, n;</span><br><span class="line">    cin &gt;&gt; m &gt;&gt; n; <span class="comment">// 从键盘输入数据的行数m和列数n</span></span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> max_value = INT_MIN;  <span class="comment">// 初始化为负无穷，确保任何输入值都会比它大</span></span><br><span class="line">    <span class="type">int</span> max_row, max_col;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 循环遍历二维数组，同时查找最大值及其所在的行和列</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">            <span class="type">int</span> value;</span><br><span class="line">            cin &gt;&gt; value; <span class="comment">// 输入二维数组中的整数值</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// 如果当前值大于已知最大值，更新最大值及其所在的行和列</span></span><br><span class="line">            <span class="keyword">if</span> (value &gt; max_value) &#123;</span><br><span class="line">                max_value = value;</span><br><span class="line">                max_row = i; <span class="comment">// 记录行下标</span></span><br><span class="line">                max_col = j; <span class="comment">// 记录列下标</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 输出最大值及其位置的行和列</span></span><br><span class="line">    cout &lt;&lt; max_value &lt;&lt; <span class="string">&quot;,&quot;</span> &lt;&lt; max_row &lt;&lt; <span class="string">&quot;,&quot;</span> &lt;&lt; max_col &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="题目6-动态二维数组的转置"><a href="#题目6-动态二维数组的转置" class="headerlink" title="题目6: 动态二维数组的转置"></a>题目6: <a target="_blank" rel="noopener" href="https://pintia.cn/problem-sets/1716048884290166784/problems/1716075294039875584">动态二维数组的转置</a></h1><h2 id="题目描述-5"><a href="#题目描述-5" class="headerlink" title="题目描述"></a>题目描述</h2><p>设计一个矩阵类Matrix（整型动态二维数组类）类中成员函数有：<br>构造函数（创建m行n列的矩阵）；析构函数（释放动态申请数组空间）；</p>
+<p>读入函数ReadMatrix（创建m行n列的矩阵元素的值）；</p>
+<p>输出函数WriteMatrix（输出m行n列的矩阵元素的值，每个元素占5个字符宽度 ）；</p>
+<p>转置函数void Transpose(Matrix&amp; B)（将当前对象矩阵转置为一个n行m列的B矩阵）。</p>
+<p>在main()函数中输入m,n的值创建m行n列的矩阵A，矩阵B是A的转置矩阵。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> m, n;</span><br><span class="line">    cin &gt;&gt; m &gt;&gt; n;</span><br><span class="line">    <span class="function">Matrix <span class="title">A</span><span class="params">(m, n)</span></span>;</span><br><span class="line">    A.<span class="built_in">ReadMatrix</span>();</span><br><span class="line">    A.<span class="built_in">WriteMatrix</span>();</span><br><span class="line">    <span class="function">Matrix <span class="title">B</span><span class="params">(n, m)</span></span>;</span><br><span class="line">    A.<span class="built_in">Transpose</span>(B);</span><br><span class="line">    B.<span class="built_in">WriteMatrix</span>();</span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="输入格式-2"><a href="#输入格式-2" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>第一行：读入连个整数m,n (中间空格隔开）<br>接下m行，每行读入n个整数（读入A矩阵）</p>
+<h3 id="输出格式-2"><a href="#输出格式-2" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>先输出A矩阵<br>后输出B矩阵（A的转置矩阵）</p>
+<h3 id="输入样例-1"><a href="#输入样例-1" class="headerlink" title="输入样例:"></a>输入样例:</h3><p>在这里给出一组输入。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4 3</span><br><span class="line">1 2 3</span><br><span class="line">2 3 4</span><br><span class="line">3 4 5</span><br><span class="line">4 5 6</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例-1"><a href="#输出样例-1" class="headerlink" title="输出样例:"></a>输出样例:</h3><p>在这里给出相应的输出。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1    2    3</span><br><span class="line">2    3    4</span><br><span class="line">3    4    5</span><br><span class="line">4    5    6</span><br><span class="line">1    2    3    4</span><br><span class="line">2    3    4    5</span><br><span class="line">3    4    5    6</span><br></pre></td></tr></table></figure>
+
+<h2 id="解题思路-5"><a href="#解题思路-5" class="headerlink" title="解题思路"></a>解题思路</h2><p>这道题需要实现一个矩阵类 <code>Matrix</code>，其中包括构造函数、析构函数、读入函数 <code>ReadMatrix</code>、输出函数 <code>WriteMatrix</code> 以及转置函数 <code>Transpose</code>。</p>
+<p>思路如下：</p>
+<ol>
+<li>定义 <code>Matrix</code> 类，其中成员数据包括 <code>m</code> 行数、<code>n</code> 列数以及二维数组用于存储矩阵数据。</li>
+<li>实现构造函数，用于动态分配内存以创建 <code>m</code> 行 <code>n</code> 列的矩阵，并进行初始化。</li>
+<li>实现析构函数，用于释放动态分配的内存。</li>
+<li>实现 <code>ReadMatrix</code> 函数，用于从标准输入读入矩阵的元素值。</li>
+<li>实现 <code>WriteMatrix</code> 函数，用于将矩阵的元素值输出到标准输出，并确保每个元素占5个字符的宽度。</li>
+<li>实现 <code>Transpose</code> 函数，它接受一个 <code>Matrix</code> 对象作为参数，将当前对象的矩阵转置为 <code>n</code> 行 <code>m</code> 列，存储在传入的矩阵中。</li>
+</ol>
+<p>在 <code>main</code> 函数中，首先读入行数 <code>m</code> 和列数 <code>n</code>，然后创建一个 <code>Matrix</code> 对象 <code>A</code>，并使用 <code>ReadMatrix</code> 读入矩阵元素值。接下来，使用 <code>WriteMatrix</code> 输出矩阵 <code>A</code> 的元素值。</p>
+<p>然后，创建另一个 <code>Matrix</code> 对象 <code>B</code>，调用 <code>Transpose</code> 函数将矩阵 <code>A</code> 转置为 <code>B</code>，最后使用 <code>WriteMatrix</code> 输出矩阵 <code>B</code> 的元素值。</p>
+<h3 id="C语言题解-5"><a href="#C语言题解-5" class="headerlink" title="C语言题解"></a>C语言题解</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义矩阵结构体</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="type">int</span> rows;     <span class="comment">// 行数</span></span><br><span class="line">    <span class="type">int</span> cols;     <span class="comment">// 列数</span></span><br><span class="line">    <span class="type">int</span> **data;   <span class="comment">// 二维整数数组用于存储矩阵数据</span></span><br><span class="line">&#125; Matrix;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数原型</span></span><br><span class="line">Matrix *<span class="title function_">createMatrix</span><span class="params">(<span class="type">int</span> rows, <span class="type">int</span> cols)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">destroyMatrix</span><span class="params">(Matrix *mat)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">readMatrix</span><span class="params">(Matrix *mat)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">writeMatrix</span><span class="params">(Matrix *mat)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">transpose</span><span class="params">(Matrix *mat, Matrix *result)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> m, n;</span><br><span class="line">    <span class="comment">// 从键盘读入行数m和列数n</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;m, &amp;n);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建矩阵A</span></span><br><span class="line">    Matrix *A = createMatrix(m, n);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 读入矩阵A的元素值</span></span><br><span class="line">    readMatrix(A);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 输出矩阵A的元素值</span></span><br><span class="line">    writeMatrix(A);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建矩阵B并将A的转置存储在B中</span></span><br><span class="line">    Matrix *B = createMatrix(n, m);</span><br><span class="line">    transpose(A, B);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 输出矩阵B的元素值，这是A的转置矩阵</span></span><br><span class="line">    writeMatrix(B);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 释放内存</span></span><br><span class="line">    destroyMatrix(A);</span><br><span class="line">    destroyMatrix(B);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建矩阵</span></span><br><span class="line">Matrix *<span class="title function_">createMatrix</span><span class="params">(<span class="type">int</span> rows, <span class="type">int</span> cols)</span> &#123;</span><br><span class="line">    Matrix *mat = (Matrix *) <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Matrix));    <span class="comment">// 分配内存以存储矩阵结构体</span></span><br><span class="line">    mat-&gt;rows = rows;                                 <span class="comment">// 设置行数</span></span><br><span class="line">    mat-&gt;cols = cols;                                 <span class="comment">// 设置列数</span></span><br><span class="line">    mat-&gt;data = (<span class="type">int</span> **) <span class="built_in">malloc</span>(rows * <span class="keyword">sizeof</span>(<span class="type">int</span> *));   <span class="comment">// 分配内存以存储行指针数组</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; rows; i++) &#123;</span><br><span class="line">        mat-&gt;data[i] = (<span class="type">int</span> *) <span class="built_in">malloc</span>(cols * <span class="keyword">sizeof</span>(<span class="type">int</span>)); <span class="comment">// 分配内存以存储每行的数据</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> mat;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 释放矩阵内存</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">destroyMatrix</span><span class="params">(Matrix *mat)</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; mat-&gt;rows; i++) &#123;</span><br><span class="line">        <span class="built_in">free</span>(mat-&gt;data[i]);      <span class="comment">// 释放每行的数据数组</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">free</span>(mat-&gt;data);             <span class="comment">// 释放行指针数组</span></span><br><span class="line">    <span class="built_in">free</span>(mat);                   <span class="comment">// 释放矩阵结构体</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 读入矩阵元素值</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">readMatrix</span><span class="params">(Matrix *mat)</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; mat-&gt;rows; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; mat-&gt;cols; j++) &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;mat-&gt;data[i][j]); <span class="comment">// 通过键盘输入，将元素值存储在矩阵的对应位置。</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出矩阵元素值</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">writeMatrix</span><span class="params">(Matrix *mat)</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; mat-&gt;rows; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; mat-&gt;cols; j++) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%5d&quot;</span>, mat-&gt;data[i][j]); <span class="comment">// 设置输出格式，每个元素占5个字符的宽度</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>); <span class="comment">// 输出每行后添加换行符，以分隔不同的行。</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 转置矩阵</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">transpose</span><span class="params">(Matrix *mat, Matrix *result)</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; mat-&gt;rows; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; mat-&gt;cols; j++) &#123;</span><br><span class="line">            result-&gt;data[j][i] = mat-&gt;data[i][j]; <span class="comment">// 矩阵转置是将原矩阵中的行变为列，列变为行。</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="C-语言题解-5"><a href="#C-语言题解-5" class="headerlink" title="C++语言题解"></a>C++语言题解</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span> <span class="comment">// 用于设置输出格式</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义一个矩阵类 Matrix</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * public 部分包含类的公共成员函数，</span></span><br><span class="line"><span class="comment"> * 它们可以被外部代码访问，而 private 部分包含了类的私有成员数据，</span></span><br><span class="line"><span class="comment"> * 这些数据对外部代码不可见。</span></span><br><span class="line"><span class="comment"> * 这种封装和隐藏内部实现的方法有助于提高代码的可维护性和安全性。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Matrix</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// 构造函数：创建m行n列的矩阵</span></span><br><span class="line">    <span class="comment">// 构造函数是公共成员，用于初始化矩阵对象</span></span><br><span class="line">    <span class="built_in">Matrix</span>(<span class="type">int</span> rows, <span class="type">int</span> cols) : <span class="built_in">m</span>(rows), <span class="built_in">n</span>(cols) &#123;</span><br><span class="line">        <span class="comment">// 动态分配内存以存储矩阵数据</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 首先，创建一个包含m个指针的数组，每个指针指向一个整数数组。</span></span><br><span class="line">        data = <span class="keyword">new</span> <span class="type">int</span>*[m];</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 然后，为每个整数数组分配内存，这些数组将用于存储矩阵的数据。</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">            data[i] = <span class="keyword">new</span> <span class="type">int</span>[n];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 析构函数：释放动态分配的内存</span></span><br><span class="line">    <span class="comment">// 析构函数也是公共成员，用于在对象生命周期结束时清理资源</span></span><br><span class="line">    ~<span class="built_in">Matrix</span>() &#123;</span><br><span class="line">        <span class="comment">// 释放每行的整数数组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">            <span class="keyword">delete</span>[] data[i];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 释放指向每行整数数组的指针数组</span></span><br><span class="line">        <span class="keyword">delete</span>[] data;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 读入函数：读入矩阵元素值</span></span><br><span class="line">    <span class="comment">// 读入函数是公共成员，允许外部代码向矩阵对象输入数据</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">ReadMatrix</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">                <span class="comment">// 通过键盘输入，将元素值存储在矩阵的对应位置。</span></span><br><span class="line">                cin &gt;&gt; data[i][j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 输出函数：输出矩阵元素值</span></span><br><span class="line">    <span class="comment">// 输出函数也是公共成员，允许外部代码获取和显示矩阵数据</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">WriteMatrix</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">                <span class="comment">// 设置输出格式，每个元素占5个字符的宽度，以保持矩阵的整齐性。</span></span><br><span class="line">                cout &lt;&lt; <span class="built_in">setw</span>(<span class="number">5</span>) &lt;&lt; data[i][j];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 每一行结束后输出一个换行符，以便分隔不同的行。</span></span><br><span class="line">            cout &lt;&lt; endl;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 转置函数：将当前矩阵转置为n行m列的B矩阵</span></span><br><span class="line">    <span class="comment">// 转置函数也是公共成员，允许外部代码获得矩阵的转置</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">Transpose</span><span class="params">(Matrix&amp; B)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">                <span class="comment">// 矩阵转置是将原矩阵中的行变为列，列变为行。</span></span><br><span class="line">                B.data[j][i] = data[i][j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">int</span> m; <span class="comment">// 行数</span></span><br><span class="line">    <span class="type">int</span> n; <span class="comment">// 列数</span></span><br><span class="line">    <span class="type">int</span>** data; <span class="comment">// 二维数组存储矩阵数据</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> m, n;</span><br><span class="line">    <span class="comment">// 从键盘读入行数m和列数n</span></span><br><span class="line">    cin &gt;&gt; m &gt;&gt; n;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建矩阵A</span></span><br><span class="line">    <span class="function">Matrix <span class="title">A</span><span class="params">(m, n)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 读入矩阵A的元素值</span></span><br><span class="line">    A.<span class="built_in">ReadMatrix</span>();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 输出矩阵A的元素值</span></span><br><span class="line">    A.<span class="built_in">WriteMatrix</span>();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建矩阵B并将A的转置存储在B中</span></span><br><span class="line">    <span class="function">Matrix <span class="title">B</span><span class="params">(n, m)</span></span>;</span><br><span class="line">    A.<span class="built_in">Transpose</span>(B);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 输出矩阵B的元素值，这是A的转置矩阵</span></span><br><span class="line">    B.<span class="built_in">WriteMatrix</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="题目7-A-B"><a href="#题目7-A-B" class="headerlink" title="题目7: A-B"></a>题目7: <a target="_blank" rel="noopener" href="https://pintia.cn/problem-sets/1716048884290166784/problems/1716075631568109568">A-B</a></h1><h2 id="题目描述-6"><a href="#题目描述-6" class="headerlink" title="题目描述"></a>题目描述</h2><p>本题要求你计算 $A−B$。不过麻烦的是，$A$ 和 $B$ 都是字符串 —— 即从字符串<em>A</em>中把字符串<em>B</em>所包含的字符全删掉，剩下的字符组成的就是字符串 $A−B$。</p>
+<h3 id="输入格式：-1"><a href="#输入格式：-1" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在2行中先后给出字符串 $A$ 和 $B$。两字符串的长度都不超过$10^4$，并且保证每个字符串都是由可见的ASCII码和空白字符组成，最后以换行符结束。</p>
+<h3 id="输出格式：-1"><a href="#输出格式：-1" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中打印出 $A−B$的结果字符串。</p>
+<h3 id="输入样例：-2"><a href="#输入样例：-2" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">I love GPLT!  It&#x27;s a fun game!</span><br><span class="line">aeiou</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例：-2"><a href="#输出样例：-2" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">I lv GPLT!  It&#x27;s  fn gm!</span><br></pre></td></tr></table></figure>
+
+<h2 id="解题思路-6"><a href="#解题思路-6" class="headerlink" title="解题思路"></a>解题思路</h2><p>思路：</p>
+<ol>
+<li>读取两行输入，分别为字符串A和字符串B。</li>
+<li>创建一个空字符串，用于存储A−B的结果。</li>
+<li>遍历字符串A的每个字符，对于每个字符，检查它是否在字符串B中出现。</li>
+<li>如果字符不在字符串B中出现，将它添加到结果字符串中。</li>
+<li>最终，结果字符串中将只包含字符串A中不在字符串B中出现的字符。</li>
+<li>输出结果字符串。</li>
+</ol>
+<h3 id="C语言题解-6"><a href="#C语言题解-6" class="headerlink" title="C语言题解"></a>C语言题解</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="comment">// 声明字符数组来存储字符串A、B和结果</span></span><br><span class="line">    <span class="type">char</span> A[<span class="number">10001</span>], B[<span class="number">10001</span>], result[<span class="number">10001</span>];</span><br><span class="line">    <span class="comment">// 声明用于存储字符串A和B的长度</span></span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> lenA = <span class="number">0</span>, lenB = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 初始化用于循环的计数器</span></span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>, c = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 从标准输入中读取字符串A，同时计算字符串A的长度</span></span><br><span class="line">    <span class="keyword">while</span> ((A[i] = getchar()) != <span class="string">&#x27;\n&#x27;</span> &amp;&amp; lenA &lt; <span class="number">10000</span>) &#123;</span><br><span class="line">        lenA++;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">    A[lenA] = <span class="string">&#x27;\0&#x27;</span>; <span class="comment">// 添加字符串A的结尾标志</span></span><br><span class="line"></span><br><span class="line">    i = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 从标准输入中读取字符串B，同时计算字符串B的长度</span></span><br><span class="line">    <span class="keyword">while</span> ((B[i] = getchar()) != <span class="string">&#x27;\n&#x27;</span> &amp;&amp; lenB &lt; <span class="number">10000</span>) &#123;</span><br><span class="line">        lenB++;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">    B[lenB] = <span class="string">&#x27;\0&#x27;</span>; <span class="comment">// 添加字符串B的结尾标志</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 开始处理字符串A，查找A中的字符是否在B中出现</span></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; lenA; i++) &#123;</span><br><span class="line">        <span class="comment">// 使用 strchr 函数查找字符是否在字符串 B 中出现</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">strchr</span>(B, A[i]) == <span class="literal">NULL</span>) &#123;</span><br><span class="line">            <span class="comment">// 如果字符不在B中找到，将其添加到结果中</span></span><br><span class="line">            result[c++] = A[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    result[c] = <span class="string">&#x27;\0&#x27;</span>; <span class="comment">// 添加结果字符串的结尾标志</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 输出A-B的结果</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>, result);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="C-语言题解-6"><a href="#C-语言题解-6" class="headerlink" title="C++语言题解"></a>C++语言题解</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    string A, B;</span><br><span class="line">    <span class="built_in">getline</span>(cin, A); <span class="comment">// 读取字符串A</span></span><br><span class="line">    <span class="built_in">getline</span>(cin, B); <span class="comment">// 读取字符串B</span></span><br><span class="line"></span><br><span class="line">    string result = <span class="string">&quot;&quot;</span>; <span class="comment">// 用于存储A-B的结果</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 遍历字符串A的每个字符</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; A.<span class="built_in">length</span>(); i++) &#123;</span><br><span class="line">        <span class="type">char</span> c = A[i];</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 检查字符是否在字符串B中出现</span></span><br><span class="line">        <span class="keyword">if</span> (B.<span class="built_in">find</span>(c) == string::npos) &#123;</span><br><span class="line">            <span class="comment">// 如果find函数返回string::npos，表示字符不在字符串B中出现</span></span><br><span class="line">            result += c; <span class="comment">// 将字符添加到结果字符串</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; result &lt;&lt; endl; <span class="comment">// 输出A-B的结果</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+
+                
+
+
+<p class="pink-link-context">
+    <a href="/2023/10/24/hello-world/" rel="next" title="Hello World">
+    下一篇：Hello World
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large pink">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect green" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse yellow darken-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+    <footer class="page-footer indigo darken-1">
+    
+
+    <div class="footer-copyright pink-link-context">
+        <div class="container">
+            © 2016 example.com, All rights reserved.
+            <p class="right" style="margin-top: 0;">本博客由 <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> 强力驱动 | 主题 <a target="_blank" rel="noopener" href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>
+        </div>
+    </div>
+</footer>
+
+
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('pink lighten-2');
+
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" async
+  src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+</body>
+</html>
