@@ -1,0 +1,627 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title>MJUPC-029-编程挑战系列赛第二十九场——题解 | </title>
+    <meta name="author" content="Scars">
+    
+    <meta name="description" content="题目1: 欢迎来到MJUPC题目描述直接按输出样例输出MJU-PC
+输入样例:1234567891011```### 输出样例:```out  __  __      _ _    _        _____   _____  |  \/  |    | | |  | |      |  __ \">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="MJUPC-029-编程挑战系列赛第二十九场——题解"/>
+    <meta property="og:site_name" content="Scars&#39; Blog"/>
+
+    
+    <meta property="og:image" content=""/>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="Scars&#39; Blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+    
+        <link rel="stylesheet" href="/css/lib/prettify-tomorrow-night-eighties.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="indigo">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">Scars&#39; Blog</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            分类
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-reading " href="/reading" >
+                            <i class="fa fa-book "></i>
+                            
+                            读书
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            
+                            关于
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            搜索
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav indigo darken-1" id="main-menu">
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    
+                    首页
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    归档
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    分类
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-reading " href="/reading" >
+                    <i class="fa fa-book "></i>
+                    
+                    读书
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    
+                    关于
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    搜索
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav indigo darken-1" id="category-menu">
+    
+
+            
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">搜索</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper indigo">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>MJUPC-029-编程挑战系列赛第二十九场——题解</h1>
+    
+
+
+            </div>
+            <time class="pink-link-context" datetime="2023-12-17T09:00:00.000Z"><a href="/2023/12/17/MJUPC-029-%E7%BC%96%E7%A8%8B%E6%8C%91%E6%88%98%E7%B3%BB%E5%88%97%E8%B5%9B%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B9%9D%E5%9C%BA%E2%80%94%E2%80%94%E9%A2%98%E8%A7%A3/">2023-12-17</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/输入输出流/" class="chip pink lighten-1">输入输出流</a>
+        
+            <a href="/tags/字符串/" class="chip pink lighten-1">字符串</a>
+        
+            <a href="/tags/分支控制/" class="chip pink lighten-1">分支控制</a>
+        
+            <a href="/tags/循环控制/" class="chip pink lighten-1">循环控制</a>
+        
+            <a href="/tags/栈/" class="chip pink lighten-1">栈</a>
+        
+            <a href="/tags/STL/" class="chip pink lighten-1">STL</a>
+        
+            <a href="/tags/模拟/" class="chip pink lighten-1">模拟</a>
+        
+            <a href="/tags/set/" class="chip pink lighten-1">set</a>
+        
+            <a href="/tags/数组/" class="chip pink lighten-1">数组</a>
+        
+            <a href="/tags/前缀和/" class="chip pink lighten-1">前缀和</a>
+        
+            <a href="/tags/差分/" class="chip pink lighten-1">差分</a>
+        
+            <a href="/tags/树状数组/" class="chip pink lighten-1">树状数组</a>
+        
+            <a href="/tags/图论/" class="chip pink lighten-1">图论</a>
+        
+            <a href="/tags/并查集/" class="chip pink lighten-1">并查集</a>
+        
+    </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#%E9%A2%98%E7%9B%AE1-%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0MJUPC"><span class="section table-of-contents-text">题目1: 欢迎来到MJUPC</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="section table-of-contents-text">题目描述</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B"><span class="section table-of-contents-text">输入样例:</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="section table-of-contents-text">解题思路</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E9%A2%98%E8%A7%A3%E4%BB%A3%E7%A0%81"><span class="section table-of-contents-text">题解代码</span></a></li></ol></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#%E9%A2%98%E7%9B%AE2-%E7%9C%9F%E5%81%87%E5%AD%90%E6%B6%B5"><span class="section table-of-contents-text">题目2: 真假子涵</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-1"><span class="section table-of-contents-text">题目描述</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="section table-of-contents-text">输入格式:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="section table-of-contents-text">输出格式:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B-1"><span class="section table-of-contents-text">输入样例:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B"><span class="section table-of-contents-text">输出样例:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%AF%B4%E6%98%8E"><span class="section table-of-contents-text">说明</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF-1"><span class="section table-of-contents-text">解题思路</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E9%A2%98%E8%A7%A3%E4%BB%A3%E7%A0%81-1"><span class="section table-of-contents-text">题解代码</span></a></li></ol></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#%E9%A2%98%E7%9B%AE3-%E5%BC%82%EF%BC%81%E7%89%A9%EF%BC%81"><span class="section table-of-contents-text">题目3: 异！物！</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-2"><span class="section table-of-contents-text">题目描述</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-1"><span class="section table-of-contents-text">输入格式:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-1"><span class="section table-of-contents-text">输出格式:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B1"><span class="section table-of-contents-text">输入样例1:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B1"><span class="section table-of-contents-text">输出样例1:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B2"><span class="section table-of-contents-text">输入样例2:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B2"><span class="section table-of-contents-text">输出样例2:</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF-2"><span class="section table-of-contents-text">解题思路</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E9%A2%98%E8%A7%A3%E4%BB%A3%E7%A0%81-2"><span class="section table-of-contents-text">题解代码</span></a></li></ol></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#%E9%A2%98%E7%9B%AE4-%E5%BC%82%EF%BC%81%E7%89%A9%EF%BC%81-2"><span class="section table-of-contents-text">题目4: 异！物！ #2</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-3"><span class="section table-of-contents-text">题目描述</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-2"><span class="section table-of-contents-text">输入格式:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-2"><span class="section table-of-contents-text">输出格式:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B-2"><span class="section table-of-contents-text">输入样例:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-1"><span class="section table-of-contents-text">输出样例:</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF-3"><span class="section table-of-contents-text">解题思路</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E9%A2%98%E8%A7%A3%E4%BB%A3%E7%A0%81-3"><span class="section table-of-contents-text">题解代码</span></a></li></ol></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#%E9%A2%98%E7%9B%AE5-%E9%BE%99%E7%8E%8B"><span class="section table-of-contents-text">题目5: 龙王</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-4"><span class="section table-of-contents-text">题目描述</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-3"><span class="section table-of-contents-text">输入格式:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-3"><span class="section table-of-contents-text">输出格式:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B-3"><span class="section table-of-contents-text">输入样例:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-2"><span class="section table-of-contents-text">输出样例:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%AF%B4%E6%98%8E-1"><span class="section table-of-contents-text">说明</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF-4"><span class="section table-of-contents-text">解题思路</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#C-%E8%AF%AD%E8%A8%80%E9%A2%98%E8%A7%A3%E4%BB%A3%E7%A0%81"><span class="section table-of-contents-text">C++语言题解代码</span></a></li></ol></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#%E9%A2%98%E7%9B%AE6-%E8%B0%81%E9%97%AE%E4%BD%A0%E4%BA%86%EF%BC%9F"><span class="section table-of-contents-text">题目6: 谁问你了？</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-5"><span class="section table-of-contents-text">题目描述</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-4"><span class="section table-of-contents-text">输入格式:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-4"><span class="section table-of-contents-text">输出格式:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B-4"><span class="section table-of-contents-text">输入样例:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-3"><span class="section table-of-contents-text">输出样例:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%AF%B4%E6%98%8E-2"><span class="section table-of-contents-text">说明</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF-5"><span class="section table-of-contents-text">解题思路</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E9%A2%98%E8%A7%A3%E4%BB%A3%E7%A0%81-4"><span class="section table-of-contents-text">题解代码</span></a></li></ol></li></ol></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <h1 id="题目1-欢迎来到MJUPC"><a href="#题目1-欢迎来到MJUPC" class="headerlink" title="题目1: 欢迎来到MJUPC"></a>题目1: <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/U390334?contestId=149546">欢迎来到MJUPC</a></h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>直接按输出样例输出MJU-PC</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line">### 输出样例:</span><br><span class="line"></span><br><span class="line">```out</span><br><span class="line">  __  __      _ _    _        _____   _____ </span><br><span class="line"> |  \/  |    | | |  | |      |  __ \ / ____|</span><br><span class="line"> | \  / |    | | |  | |______| |__) | |     </span><br><span class="line"> | |\/| |_   | | |  | |______|  ___/| |     </span><br><span class="line"> | |  | | |__| | |__| |      | |    | |____ </span><br><span class="line"> |_|  |_|\____/ \____/       |_|     \_____|</span><br></pre></td></tr></table></figure>
+
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>简单的输出题，注意转义字符的影响。</p>
+<h3 id="题解代码"><a href="#题解代码" class="headerlink" title="题解代码"></a>题解代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;  __  __      _ _    _        _____   _____ \n&quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; |  \\/  |    | | |  | |      |  __ \\ / ____|\n&quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; | \\  / |    | | |  | |______| |__) | |     \n&quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; | |\\/| |_   | | |  | |______|  ___/| |     \n&quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; | |  | | |__| | |__| |      | |    | |____ \n&quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; |_|  |_|\\____/ \\____/       |_|     \\_____|&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="题目2-真假子涵"><a href="#题目2-真假子涵" class="headerlink" title="题目2: 真假子涵"></a>题目2: <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/U390335?contestId=149546">真假子涵</a></h1><h2 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h2><p>最近出现了许多子涵，每个子涵都有一个id，共有n个子涵参加真假子涵竞争，请找出真的子涵并输出ta的id号。<strong>（id最大的即为真子涵）</strong>。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>先输入一个整数$n$，代表竞争的子涵数。<br>接下来有 $n$ 行，为第一个子涵到第 $n$ 个子涵的id。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>输出真子涵的id</p>
+<h3 id="输入样例-1"><a href="#输入样例-1" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">57482395734</span><br><span class="line">0101011</span><br><span class="line">123</span><br><span class="line">666</span><br><span class="line">888</span><br><span class="line">99999888887777766</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">99999888887777766</span><br></pre></td></tr></table></figure>
+
+<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>id号可能会很大，最多到 $123$ 位数字。<br>$1 \leq n \leq 20$。</p>
+<h2 id="解题思路-1"><a href="#解题思路-1" class="headerlink" title="解题思路"></a>解题思路</h2><p>因为id号最大可达123位，所以用字符串作为id的数据结构，利用字符串的特性来比较对应真实的id号码数字的大小即可。</p>
+<h3 id="题解代码-1"><a href="#题解代码-1" class="headerlink" title="题解代码"></a>题解代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    string max = <span class="string">&quot;&quot;</span>;</span><br><span class="line">    string in;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; in;</span><br><span class="line">        <span class="type">int</span> inSize = in.<span class="built_in">size</span>();</span><br><span class="line">        <span class="type">int</span> maxSize = max.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">if</span> (inSize &gt; maxSize || (inSize &gt;= maxSize &amp;&amp; in &gt; max)) &#123;</span><br><span class="line">            max = in;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; max;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="题目3-异！物！"><a href="#题目3-异！物！" class="headerlink" title="题目3: 异！物！"></a>题目3: <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/U390330?contestId=149546">异！物！</a></h1><h2 id="题目描述-2"><a href="#题目描述-2" class="headerlink" title="题目描述"></a>题目描述</h2><p>顶镇同学非常地爱干净，他的家中有个雪豹机器人，每天都会推送房屋的整洁情况，但是这个机器人受到了来自东方的神秘力量的干扰，导致信息的传输发生了错误。不过幸运的是，这些传输回来的信息依然有迹可循。顶镇看到的错误信息是一个<strong>只由小写字母组成</strong>的字符串$s (1 \leq \lvert s \lvert \leq 100)$，已知在字符串$s$中，若组成$s$的字母种类的个数为偶数，代表房屋干净，否则代表房屋中有异物，不干净。</p>
+<h3 id="输入格式-1"><a href="#输入格式-1" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入有$1$行，为字符串$s$。</p>
+<h3 id="输出格式-1"><a href="#输出格式-1" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>输出只有$1$行，若房屋干净，输出一行<code>CLEAN!</code>，若房屋不干净，即有异物，输出一行<code>YI WU!</code>。</p>
+<h3 id="输入样例1"><a href="#输入样例1" class="headerlink" title="输入样例1:"></a>输入样例1:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ovouo</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例1"><a href="#输出样例1" class="headerlink" title="输出样例1:"></a>输出样例1:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">YI! WU!</span><br></pre></td></tr></table></figure>
+
+<h3 id="输入样例2"><a href="#输入样例2" class="headerlink" title="输入样例2:"></a>输入样例2:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qaq</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例2"><a href="#输出样例2" class="headerlink" title="输出样例2:"></a>输出样例2:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CLEAN!</span><br></pre></td></tr></table></figure>
+
+<h2 id="解题思路-2"><a href="#解题思路-2" class="headerlink" title="解题思路"></a>解题思路</h2><p>遍历整个字符串，利用set容器获取组成字符串的字母种类数，判断奇偶后即可得到答案。</p>
+<h3 id="题解代码-2"><a href="#题解代码-2" class="headerlink" title="题解代码"></a>题解代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="function">vector&lt;string&gt; <span class="title">ans</span><span class="params">(&#123;<span class="string">&quot;CLEAN!&quot;</span>, <span class="string">&quot;YI! WU!&quot;</span>&#125;)</span></span>;</span><br><span class="line">    string s;</span><br><span class="line">    cin &gt;&gt; s;</span><br><span class="line">    set&lt;<span class="type">char</span>&gt; chars;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;c : s)</span><br><span class="line">        chars.<span class="built_in">insert</span>(c);</span><br><span class="line">    cout &lt;&lt; ans[chars.<span class="built_in">size</span>() &amp; <span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> _ = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (_--)</span><br><span class="line">        <span class="built_in">solve</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="题目4-异！物！-2"><a href="#题目4-异！物！-2" class="headerlink" title="题目4: 异！物！ #2"></a>题目4: <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/U390331?contestId=149546">异！物！ #2</a></h1><h2 id="题目描述-3"><a href="#题目描述-3" class="headerlink" title="题目描述"></a>题目描述</h2><p>顶镇同学的房间里有个储物箱，他的储物箱有个特点，第一个物品只能放在箱子底部，往后的物品都只能堆在前一个物品的上方，取一次物品时只能从储物箱的最上方取。今天他想整理他的储物箱里面的东西（方便起见，用整数数字来替代这些物品）。他会把东西拿出来，也会把已经拿出来的东西放进去，也会拿他充满芝士的雪豹机器人检测是否有异物。检测到有异物的标准如下：</p>
+<ul>
+<li>若此时储物箱内的数字的最大值超过了限定的最大值，则表明有异物。</li>
+</ul>
+<p>你需要编写程序来模拟他整理东西时的情景。</p>
+<h3 id="输入格式-2"><a href="#输入格式-2" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>第一行，两个整数，$T (1 \leq T \leq 1 \times10^5), max (-2^{60} \leq max \leq 2^{60})$，代表顶镇操作的次数和限定的最大值。<br>接下来$T$行，每行给出一个操作，格式如下：</p>
+<ul>
+<li><code>Put X</code>，表示把一个整数$X (-2^{60} \leq X \leq 2^{60})$放入储物箱中；</li>
+<li><code>Take</code>，表示取一次物品；</li>
+<li><code>Check</code>，表示检测储物箱中是否有异物。</li>
+</ul>
+<h3 id="输出格式-2"><a href="#输出格式-2" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>对输入中的每个操作，按照要求执行操作。对每个 <code>Take</code>，在一行中输出取出的数字；对每个 <code>Check</code>，在一行中输出此刻储物箱中是否有异物，若有则输出<code>YI WU!</code>，否则输出此时储物箱中所有数字的最大值。若执行 <code>Take</code> 或 <code>Check</code> 时储物箱是空的，则对应输出 <code>MaMaShengDe</code>，并且不执行该操作。题目保证至少有一行输出。</p>
+<h3 id="输入样例-2"><a href="#输入样例-2" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">10 25</span><br><span class="line">Take</span><br><span class="line">Put 11</span><br><span class="line">Put 45</span><br><span class="line">Check</span><br><span class="line">Put 14</span><br><span class="line">Check</span><br><span class="line">Take</span><br><span class="line">Check</span><br><span class="line">Take</span><br><span class="line">Take</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例-1"><a href="#输出样例-1" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">MaMaShengDe</span><br><span class="line">YI WU!</span><br><span class="line">YI WU!</span><br><span class="line">14</span><br><span class="line">YI WU!</span><br><span class="line">45</span><br><span class="line">11</span><br></pre></td></tr></table></figure>
+
+<h2 id="解题思路-3"><a href="#解题思路-3" class="headerlink" title="解题思路"></a>解题思路</h2><p>改进栈这个数据结构，添加一个<strong>set</strong>容器来快速维护栈中元素的最大值，要使用<strong>multiset</strong>而不能是<strong>set</strong>，因为栈中的元素可以是重复的，注意数据范围，要开<code>long long</code>。</p>
+<h3 id="题解代码-3"><a href="#题解代码-3" class="headerlink" title="题解代码"></a>题解代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> string ERROR = <span class="string">&quot;MaMaShengDe&quot;</span>;</span><br><span class="line">ll maximumLimit;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">myStack</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    stack&lt;ll&gt; s;</span><br><span class="line">    multiset&lt;ll&gt; allValue;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">POP</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (s.<span class="built_in">empty</span>())</span><br><span class="line">            cout &lt;&lt; ERROR;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            allValue.<span class="built_in">erase</span>(allValue.<span class="built_in">find</span>(s.<span class="built_in">top</span>()));</span><br><span class="line">            cout &lt;&lt; s.<span class="built_in">top</span>();</span><br><span class="line">            s.<span class="built_in">pop</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">PUSH</span><span class="params">(ll n)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        allValue.<span class="built_in">insert</span>(n);</span><br><span class="line"></span><br><span class="line">        s.<span class="built_in">push</span>(n);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">PeekMax</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (s.<span class="built_in">empty</span>())</span><br><span class="line">            cout &lt;&lt; ERROR;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (*(allValue.<span class="built_in">rbegin</span>()) &gt; maximumLimit)</span><br><span class="line">                cout &lt;&lt; <span class="string">&quot;YI WU!&quot;</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                cout &lt;&lt; *(allValue.<span class="built_in">rbegin</span>());</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">myStack</span>() &#123;&#125;</span><br><span class="line"></span><br><span class="line">    ~<span class="built_in">myStack</span>()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span> (!s.<span class="built_in">empty</span>())</span><br><span class="line">            s.<span class="built_in">pop</span>();</span><br><span class="line">        allValue.<span class="built_in">clear</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">myStack s;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    string op;</span><br><span class="line">    cin &gt;&gt; op;</span><br><span class="line">    <span class="keyword">if</span> (op == <span class="string">&quot;Check&quot;</span>)</span><br><span class="line">        s.<span class="built_in">PeekMax</span>();</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (op == <span class="string">&quot;Put&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            ll n;</span><br><span class="line">            cin &gt;&gt; n;</span><br><span class="line">            s.<span class="built_in">PUSH</span>(n);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            s.<span class="built_in">POP</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">    cout.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">    <span class="type">int</span> _;</span><br><span class="line">    cin &gt;&gt; _ &gt;&gt; maximumLimit;</span><br><span class="line">    <span class="keyword">while</span> (_--)</span><br><span class="line">        <span class="built_in">solve</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="题目5-龙王"><a href="#题目5-龙王" class="headerlink" title="题目5: 龙王"></a>题目5: <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/U390332?contestId=149546">龙王</a></h1><h2 id="题目描述-4"><a href="#题目描述-4" class="headerlink" title="题目描述"></a>题目描述</h2><p>Scars有一次获得了【龙王】标识，同时，他获得了【呼风唤雨】的技能。</p>
+<p>在群聊中，一共有$n$个成员，编号为$1, 2, \dots, n$，，但Scars不知道的是这$n$个群员都是kiki使用影分身之术的分身。愤怒的Scars会使用$s$次技能，这个技能可以让编号为$k$的群员的头上降下$L$升的雨水。在施放完成$s$次技能后，他会对所有群员进行$q$次查询，对于第$i$次查询，他会查询编号在$[l_i, r_i]$内的群员头上的降水总量。</p>
+<h3 id="输入格式-3"><a href="#输入格式-3" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>第一行，三个正整数，$n, s, q$，代表群员数量、使用技能的次数和查询的次数。<br>第二行，$n$个正整数，为$a_1, a_2, \dots, a_n$，依次表示$n$位群员头上的初始降水量。<br>接下来$s$行，每行两个正整数，$k, L$，代表每次施放技能时，让编号为$k$的群员的头上降下$L$升的雨水。<br>再接下来$q$行，每行两个正整数，$l, r$，代表每次查询的编号区间范围为$[l_i, r_i]$。</p>
+<h3 id="输出格式-3"><a href="#输出格式-3" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>共$q$行，对应$q$次查询的结果，即第$i$行的结果是第$i$次查询的结果。</p>
+<h3 id="输入样例-3"><a href="#输入样例-3" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">5 3 2</span><br><span class="line">1 2 3 4 5</span><br><span class="line">1 1</span><br><span class="line">2 5</span><br><span class="line">2 4</span><br><span class="line">1 5</span><br><span class="line">3 3</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例-2"><a href="#输出样例-2" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">25</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
+
+<h3 id="说明-1"><a href="#说明-1" class="headerlink" title="说明"></a>说明</h3><p>数据范围<br>$1 \leq n, s, q \leq 2 \times 10^5, 1 \leq a_i \leq 10^9,  1 \leq k \leq n, 0 \leq L \leq 10^9, 1 \leq l \leq r \leq n$。</p>
+<h2 id="解题思路-4"><a href="#解题思路-4" class="headerlink" title="解题思路"></a>解题思路</h2><p>很容易想到的常规做法是构造前缀和和差分数组来维护区间和以及单点修改，但是数据量大的时候效率不佳，所以采用树状数组这种数据结构来维护区间和以及单点修改，这样本题就变成了树状数组的单点修改、区间查询的模板题。</p>
+<h3 id="C-语言题解代码"><a href="#C-语言题解代码" class="headerlink" title="C++语言题解代码"></a>C++语言题解代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">treeArray</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    vector&lt;T&gt; tree;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">lowbit</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> x &amp; (-x);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">treeArray</span>(<span class="type">int</span> n)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">this</span>-&gt;n = n;</span><br><span class="line">        tree.<span class="built_in">resize</span>(n + <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">update</span><span class="params">(<span class="type">int</span> idx, T val)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = idx; i &lt;= n; i += <span class="built_in">lowbit</span>(i))</span><br><span class="line">            tree[i] += val;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function">T <span class="title">getSum</span><span class="params">(<span class="type">int</span> idx)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        T sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = idx; i &gt; <span class="number">0</span>; i -= <span class="built_in">lowbit</span>(i))</span><br><span class="line">            sum += tree[i];</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function">T <span class="title">query</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">getSum</span>(r) - <span class="built_in">getSum</span>(l - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> n, m, q;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m &gt;&gt; q;</span><br><span class="line">    <span class="function">treeArray&lt;ll&gt; <span class="title">ta</span><span class="params">(n)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置初始降雨量</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> a;</span><br><span class="line">        cin &gt;&gt; a;</span><br><span class="line">        ta.<span class="built_in">update</span>(i, a);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= m; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> k, L;</span><br><span class="line">        cin &gt;&gt; k &gt;&gt; L;</span><br><span class="line">        ta.<span class="built_in">update</span>(k, L);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 查询</span></span><br><span class="line">    <span class="keyword">while</span> (q--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> l, r;       </span><br><span class="line">        cin &gt;&gt; l &gt;&gt; r;</span><br><span class="line">        cout &lt;&lt; ta.<span class="built_in">query</span>(l, r) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">    cout.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">    <span class="type">int</span> _ = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (_--)</span><br><span class="line">        <span class="built_in">solve</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="题目6-谁问你了？"><a href="#题目6-谁问你了？" class="headerlink" title="题目6: 谁问你了？"></a>题目6: <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/U390333?contestId=149546">谁问你了？</a></h1><h2 id="题目描述-5"><a href="#题目描述-5" class="headerlink" title="题目描述"></a>题目描述</h2><p>在视频网站上，有些视频的评论区会出现下图中的现象：</p>
+<p><img src="/2023/12/17/MJUPC-029-%E7%BC%96%E7%A8%8B%E6%8C%91%E6%88%98%E7%B3%BB%E5%88%97%E8%B5%9B%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B9%9D%E5%9C%BA%E2%80%94%E2%80%94%E9%A2%98%E8%A7%A3/p6_1.jpg" alt="第六题图片1"></p>
+<p>假设A用户问了B用户，而B用户<strong>一定</strong>会回复A用户：谁问你了？每位用户也可能会去问其他的用户，也可能不会去询问别的用户。只要用户A有向用户B提问，B进行了回答，那么用户A和用户B就认为是一个用户群体。当然，若有用户没有向其他的任何用户提问或被其他的任何用户提问，那么这个用户就自成一个用户群体。请你编写代码，找出一个视频的评论区到底有多少种用户群体，并分别求出它们的群体人数。</p>
+<h3 id="输入格式-4"><a href="#输入格式-4" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>共$m + 1$行：</p>
+<ul>
+<li>第一行，两个整数$n, m$，$n$代表一个视频的评论区用户的总数，$m$代表一共有$m$个用户发起了提问，保证被提问的用户不会再向发起提问的用户提问，也不会向自己提问。</li>
+<li>接下来$m$行，每行两个正整数$A, B$，为了方便起见，$A$和$B$就用作用户编号，代表用户$A$向用户$B$发起了提问。</li>
+</ul>
+<h3 id="输出格式-4"><a href="#输出格式-4" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>共两行：</p>
+<ul>
+<li>第一行，输出一个正整数，代表这个视频的的评论区有多少种用户群体。</li>
+<li>第二行，从小到大输出所有用户群体的用户数，中间用空格隔开，<strong>末尾不得有多余的空格</strong>。</li>
+</ul>
+<h3 id="输入样例-4"><a href="#输入样例-4" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">5 2</span><br><span class="line">1 2</span><br><span class="line">4 5</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例-3"><a href="#输出样例-3" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">1 2 2</span><br></pre></td></tr></table></figure>
+
+<h3 id="说明-2"><a href="#说明-2" class="headerlink" title="说明"></a>说明</h3><p>数据范围<br>$1 \leq A, B \leq n \leq 2 \times 10^5, 0 \leq m \leq \frac{n(n-1)}{2}$。</p>
+<h2 id="解题思路-5"><a href="#解题思路-5" class="headerlink" title="解题思路"></a>解题思路</h2><p>一道求无向图（不存在重边和自环）联通块数量和大小的模板题，若A、B两个用户在一个群体内，可以看作在一个并查集中，对于每个点，把它们的根都求出来并放入set容器中去重即可知道联通块个数，并把并查集的根进行标记，把属于这个根的节点数量累加即可求得每个联通块的大小。</p>
+<h3 id="题解代码-4"><a href="#题解代码-4" class="headerlink" title="题解代码"></a>题解代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; fa, Size;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> fa[x] == x ? x : fa[x] = <span class="built_in">find</span>(fa[x]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">merge</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> fx = <span class="built_in">find</span>(x), fy = <span class="built_in">find</span>(y);</span><br><span class="line">    <span class="keyword">if</span> (fx != fy)</span><br><span class="line">        fa[fx] = fy;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        fa[i] = i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> n, m;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    fa.<span class="built_in">resize</span>(n + <span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">    Size.<span class="built_in">resize</span>(n + <span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="built_in">init</span>(n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= m; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> u, v;</span><br><span class="line">        cin &gt;&gt; u &gt;&gt; v;</span><br><span class="line">        <span class="built_in">merge</span>(u, v);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)</span><br><span class="line">        ++Size[<span class="built_in">find</span>(i)];</span><br><span class="line"></span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; ans;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)</span><br><span class="line">        <span class="keyword">if</span> (Size[i])</span><br><span class="line">            ans.<span class="built_in">emplace_back</span>(Size[i]);</span><br><span class="line">    <span class="built_in">sort</span>(ans.<span class="built_in">begin</span>(), ans.<span class="built_in">end</span>());</span><br><span class="line">    cout &lt;&lt; ans.<span class="built_in">size</span>() &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; ans.<span class="built_in">size</span>(); ++i)</span><br><span class="line">        cout &lt;&lt; ans[i] &lt;&lt; (i == ans.<span class="built_in">size</span>() - <span class="number">1</span> ? <span class="string">&quot;&quot;</span> : <span class="string">&quot; &quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> _ = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (_--)</span><br><span class="line">        <span class="built_in">solve</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+
+                
+
+
+<p class="pink-link-context">
+    <a href="/2023/11/24/%E7%AC%AC%E4%B8%89%E5%B1%8A%E9%9B%86%E8%AE%AD%E9%98%9F%E7%AC%AC%E4%BA%94%E6%AC%A1%E5%91%A8%E5%B0%8F%E6%B5%8B%E9%A2%98%E8%A7%A3/" rel="next" title="第三届集训队第五次周小测题解">
+    下一篇：第三届集训队第五次周小测题解
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large pink">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect green" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse yellow darken-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+    <footer class="page-footer indigo darken-1">
+    <!-- <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+    </script>
+    <span id="busuanzi_container_page_pv">
+        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+      </span> -->
+    
+
+    <div class="footer-copyright pink-link-context">
+        <div class="container">
+            © 2016 example.com, All rights reserved.
+            <p class="right" style="margin-top: 0;">本博客由 <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> 强力驱动 | 主题 <a target="_blank" rel="noopener" href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>
+        </div>
+    </div>
+</footer>
+<!-- <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script> -->
+
+
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('pink lighten-2');
+
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" async
+  src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+</body>
+</html>
